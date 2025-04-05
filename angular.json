@@ -33,7 +33,17 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/primeflex/primeflex.css"
+              "node_modules/primeflex/primeflex.css",
+              {
+                "input": "src/themes/light.css",
+                "bundleName": "light",
+                "inject": false
+              },
+              {
+                "input": "src/themes/dark.css",
+                "bundleName": "dark",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -93,7 +103,17 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/primeflex/primeflex.css"
+              "node_modules/primeflex/primeflex.css",
+              {
+                "input": "src/themes/light.css",
+                "bundleName": "light",
+                "inject": false
+              },
+              {
+                "input": "src/themes/dark.css",
+                "bundleName": "dark",
+                "inject": false
+              }
             ],
             "scripts": []
           }
