@@ -1,11 +1,43 @@
-<app-header></app-header>
 <div class="info flex flex-row">
-    <div>
-        <p-tag [rounded]="true" value="Aplicativo de Flashcards" />
+  <div class="presentation-card flex flex-column">
+    <p-tag
+      icon="pi pi-book"
+      value="Aplicativo de Flashcards"
+      [rounded]="true"
+    ></p-tag>
+
+    <h1 class="mt-4 mb-1 text-5xl font-bold text-900">
+      Memorize com eficiência usando
+      <span class="cardwise">CardWise</span>
+    </h1>
+
+    <p class="text-xl text-gray-600">
+      Uma maneira simples e elegante de criar e estudar flashcards. Melhore sua
+      memorização e estude com mais eficiência.
+    </p>
+    <p-button
+      rounded="true"
+      label="Começar agora"
+      icon="pi pi-arrow-right"
+      iconPos="right"
+      [routerLink]="['/baralho']" 
+    />
+  </div>
+  <div class="instruction-card">
+    <p class="title">Como funciona?</p>
+    <div class="instruction-info">
+      <div class="instruction-item">
+        <p class="badge">01</p>
+        <p>Crie baralhos personalizados com seus próprios flashcards</p>
+      </div>
+      <div class="instruction-item">
+        <p class="badge">02</p>
+        <p>Estude usando o sistema de repetição espaçada</p>
+      </div>
+      <div class="instruction-item">
+        <p class="badge">03</p>
+        <p>Acompanhe seu progresso e revise regularmente</p>
+      </div>
     </div>
-    <div>
-        <div>
-            <p>Como funciona?</p>
-        </div>
-    </div>
+  </div>
 </div>
