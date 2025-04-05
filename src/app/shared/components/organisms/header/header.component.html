@@ -1,10 +1,20 @@
-<div class="flex align-items-center justify-content-between">
-  <div class="ml-2 flex flex-row align-items-center gap-1">
+<div
+  class="flex align-items-center justify-content-between border-bottom-1 border-gray-300"
+>
+  <div
+    [routerLink]="['']"
+    class="ml-2 cursor-pointer flex flex-row align-items-center gap-1"
+  >
     <span class="pi pi-book"></span>
     <h2>FlashCards</h2>
   </div>
-  <div class="flex flex-row gap-1">
-    <p-button variant="outlined" label="Início" />
+  <div class="flex flex-row gap-2">
+    <p-button
+      [rounded]="true"
+      (onClick)="toggleTheme()"
+      [icon]="theme() === 'light' ? 'pi pi-moon' : 'pi pi-sun'"
+    ></p-button>
+    <p-button variant="outlined" [routerLink]="['']" label="Início" />
     <p-button variant="outlined" label="Meus Baralhos" />
   </div>
 </div>
