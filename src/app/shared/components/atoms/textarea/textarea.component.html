@@ -1,0 +1,15 @@
+<div class="flex flex-column">
+  <label class="mb-1">{{ label() }}</label>
+  <textarea
+    [placeholder]="placeholder()"
+    [disabled]="disabled"
+    [rows]="configuration().rows"
+    [cols]="configuration().cols"
+    pInputTextarea
+    [(ngModel)]="value"
+    (ngModelChange)="updateValue($event)"
+  ></textarea>
+  @if (errors && errors['required']) {
+  <small class="p-error">{{ label() }} é obrigatório.</small>
+  }
+</div>

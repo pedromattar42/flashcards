@@ -1,0 +1,18 @@
+<div class="flex flex-column">
+  <label class="mb-1">{{ label() }}</label>
+  @switch (type()) { @case('text') {
+  <input
+    class="custom-input"
+    type="text"
+    size="small"
+    [placeholder]="placeholder()"
+    [disabled]="disabled"
+    pInputText
+    [(ngModel)]="value"
+    (ngModelChange)="updateValue($event)"
+  />
+  } }
+  @if (errors && errors['required']) {
+    <small class="p-error">{{label()}} é obrigatório.</small>
+  }  
+</div>
