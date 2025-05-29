@@ -1,5 +1,5 @@
-<div
-  class="flex align-items-center justify-content-between border-bottom-1 border-gray-300"
+<header
+  class="pr-4 pl-4 flex align-items-center justify-content-between border-bottom-1 border-gray-300"
 >
   <div
     [routerLink]="['']"
@@ -8,13 +8,16 @@
     <span class="pi pi-book"></span>
     <h2>FlashCards</h2>
   </div>
-  <div class="flex flex-row gap-2">
+  <div class="flex flex-row alig-items-end gap-1">
     <p-button
       [rounded]="true"
       (onClick)="toggleTheme()"
+      size="small"
       [icon]="theme() === 'light' ? 'pi pi-moon' : 'pi pi-sun'"
     ></p-button>
-    <p-button variant="outlined" [routerLink]="['']" label="Início" />
-    <p-button variant="outlined" label="Meus Baralhos" />
+    <p-button size="small" text="true" [routerLink]="['']" label="Início" />
+    <p-button size="small" text="true" label="Meus Baralhos" />
+    <p-button size="small" outlined="true" [routerLink]="['login']" label="Entrar" />
+    <p-button size="small" label="Registrar" />
   </div>
-</div>
+</header>

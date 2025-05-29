@@ -1,0 +1,22 @@
+<div class="question">
+  <div class="mb-4">
+    <span class="text-xs">Pergunta: </span>
+    <p class="m-0 font-bold text-lg">{{ question() }}</p>
+  </div>
+
+  <div>
+    <span class="text-xs">Resposta: </span>
+    <p class="m-0">{{ answer() }}</p>
+  </div>
+
+  <div class="mt-3 flex justify-content-end align-items-end">
+    <p-button
+      size="small"
+      label="Excluir"
+      [rounded]="true"
+      icon="pi pi-trash"
+      severity="danger"
+      text="true"
+    />
+  </div>
+</div>

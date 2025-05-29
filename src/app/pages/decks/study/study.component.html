@@ -1,0 +1,96 @@
+<section class="secao">
+  <div class="flex justify-content-between align-items-center">
+    <p-button
+      label="Voltar ao baralho"
+      icon="pi pi-arrow-left"
+      size="small"
+      text="true"
+      (onClick)="returnToDeckView()"
+    />
+    <p-button
+      label="Embaralhar"
+      icon="pi pi-sort-alt"
+      size="small"
+      outlined="true"
+      severity="secondary"
+    />
+  </div>
+  <div class="mt-4 mb-3">
+    <h1 class="m-0">Estudando: {{ subject() }}</h1>
+    <span
+      >Cartão {{ currentQuestionIndex() + 1 }} de {{ totalQuestions() }}</span
+    >
+  </div>
+  <p-progressBar
+    [showValue]="false"
+    [value]="percentage()"
+    [style]="{ height: '6px' }"
+  />
+
+  <main class="mt-4">
+    @if(!studyCompleted()) {
+    <section>
+      <app-flip-card [configuration]="{ height: '500px', width: '600px' }">
+        <div flip-card-front class="flex flex-column gap-2">
+          <span class="tag">Pergunta</span>
+          {{ currentQuestion().question }}
+        </div>
+        <div flip-card-back>
+          {{ currentQuestion().answer }}
+        </div>
+      </app-flip-card>
+    </section>
+    <div
+      class="mt-4 flex flex-column justify-content-center align-items-center gap-2"
+    >
+      <div class="flex gap-2">
+        @if (currentQuestionIndex() > 0) {
+        <p-button
+          label="Anterior"
+          size="small"
+          (onClick)="previousQuestion()"
+        />
+        }
+        <p-button label="Próximo" size="small" (onClick)="nextQuestion()" />
+      </div>
+      <span class="text-sm">Clique no cartão para ver a resposta</span>
+    </div>
+    } @else {
+    <aside>
+      <div
+        class="mt-4 flex flex-column justify-content-center align-items-center gap-2"
+      >
+        <p-tag
+          [style]="{ width: '80px', height: '80px' }"
+          icon="pi pi-check"
+          [rounded]="true"
+          class="large-icon"
+        >
+        </p-tag>
+
+        <h2 class="m-0 font-bold">Parabéns!</h2>
+        <span class="text-sm text-center"
+          >Você concluiu o estudo deste baralho. Continue praticando para fixar
+          o conhecimento.</span
+        >
+        <div class="flex gap-2">
+          <p-button
+            label="Estudar novamente"
+            size="small"
+            icon="pi pi-replay"
+            (onClick)="resetStudy()"
+          />
+          <p-button
+            label="Voltar ao baralho"
+            icon="pi pi-arrow-left"
+            size="small"
+            outlined="true"
+            severity="secondary"
+            (onClick)="returnToDeckView()"
+          />
+        </div>
+      </div>
+    </aside>
+    }
+  </main>
+</section>

@@ -8,7 +8,12 @@ export const routes: Routes = [
   },
   {
     path: 'baralho',
-    loadComponent: () =>
-      import('./pages/deck/deck.component').then((m) => m.DeckComponent),
+    loadChildren: () =>
+      import('./pages/decks/decks.routes').then((m) => m.DECKS_ROUTES),
   },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./pages/auth/login/login.component').then((m) => m.LoginComponent),
+  }
 ];

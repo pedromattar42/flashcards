@@ -1,0 +1,21 @@
+<div class="col" [formGroup]="model">
+  <div class="col-12">
+    <app-input
+      formControlName="titulo"
+      [label]="'Título'"
+      [type]="'text'"
+    ></app-input>
+  </div>
+  <div class="col-12">
+    <app-textarea
+      [label]="'Descrição (opcional)'"
+      formControlName="descricao"
+      [placeholder]="'Ex: Palavras e frases comuns no inglês'"
+    ></app-textarea>
+  </div>
+</div>
+<div class="col">
+  <div class="col-12">
+    <p-button [style]="{ width: '100%' }" size="small" label="Criar baralho" />
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="flip-card" [ngStyle]="configuration()" (click)="toggle()">
+  <div class="flip-card-inner" [ngClass]="{ flipped: toggleProperty() }">
+    <div class="flip-card-front">
+      <ng-content select="[flip-card-front]"></ng-content>
+    </div>
+    <div class="flip-card-back">
+      <ng-content select="[flip-card-back]"></ng-content>
+    </div>
+  </div>
+</div>
