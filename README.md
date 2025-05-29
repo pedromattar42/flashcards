@@ -1,59 +1,37 @@
 # Flashcards
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+Aplicativo de Flashcards desenvolvido em Angular. A proposta é oferecer uma ferramenta simples, prática e eficiente para estudos, memorização e revisão de conteúdos utilizando o método de repetição espaçada.
 
-## Development server
+## Tecnologias utilizadas
 
-To start a local development server, run:
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [RxJS](https://rxjs.dev/)
+- [PrimeNg](https://v17.primeng.org/)
+- [PrimeFlex](https://primeflex.org/)
+
+## Funcionalidades
+
+- CRUD de baralhos (Decks)
+- Adicionar, editar e excluir flashcards
+- Modo de estudo interativo dos cards
+- Sistema de repetição para memorização
+- Pesquisa e filtros nos decks
+- Layout responsivo e intuitivo
+- Armazenamento de dados local ou remoto (dependendo da versão)
+
+# Pré-requisitos
+
+- [Node.js](https://nodejs.org/) instalado (versão recomendada LTS)
+- [Angular CLI](https://angular.io/cli) instalado globalmente:
 
 ```bash
+npm install -g @angular/cli
+```
+
+# Instalando as dependências
+npm install
+# Executando o projeto em ambiente de desenvolvimento
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Acesse no navegador:
+http://localhost:4200
